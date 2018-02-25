@@ -1,3 +1,5 @@
+Copied from 'https://github.com/Loonride/phaser-squares/tree/master/asset' to modify and learn.
+
 See the demo: https://loonride.com/examples/phaser-squares/
 
 See the tutorial: https://loonride.com/learn/phaser/getting-started
