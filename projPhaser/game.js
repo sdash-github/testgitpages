@@ -2,7 +2,7 @@
 var width = 480;
 var height = 320;
 //create game object and initialize the canvas
-var game = new Phaser.Game(width, height, Phaser.AUTO, null, {preload: preload, create: create, update: update});
+var game = new Phaser.Game(width, height, Phaser.AUTO, 'secrighttop', {preload: preload, create: create, update: update});
 
 //initialize some variables
 var player;
@@ -12,6 +12,7 @@ var speed = 175;
 var score = 0;
 var scoreText;
 
+
 function preload() {
 	//set background color of canvas
 	game.stage.backgroundColor = '#eee';
@@ -20,6 +21,8 @@ function preload() {
 	game.load.image('player', 'asset/blue-square.png');
 	game.load.image('food', 'asset/red-square.png');
 }
+
+
 function create() {
 	//start arcade physics engine
 	game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -52,6 +55,8 @@ function create() {
 	//place score text on the screen
 	scoreText = game.add.text(5, 3, score);
 }
+
+
 function update() {
 
 	//move the player up and down based on keyboard arrows
@@ -79,6 +84,7 @@ function update() {
 	//call eatFood function when the player and a piece of food overlap
 	game.physics.arcade.overlap(player, food, eatFood);
 }
+
 
 //eatFood function
 function eatFood(player, food) {
