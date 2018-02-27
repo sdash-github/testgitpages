@@ -2,6 +2,7 @@
 var width = 480;
 var height = 320;
 //create game object and initialize the canvas
+    //the 4th arg is: dom Id where the game goes inside
 var game = new Phaser.Game(width, height, Phaser.AUTO, 'secrighttop', {preload: preload, create: create, update: update});
 
 //initialize some variables
@@ -15,7 +16,8 @@ var scoreText;
 
 function preload() {
 	//set background color of canvas
-	game.stage.backgroundColor = '#eee';
+	//game.stage.backgroundColor = '#eee';
+  game.stage.backgroundColor = '#ffff00';
 
 	//load assets
 	game.load.image('player', 'asset/blue-square.png');
